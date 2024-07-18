@@ -1,0 +1,31 @@
+.post-card{
+    padding-bottom: 25px;
+    width: 400px;
+    height: 300px;
+    border-radius: 10px;
+    border: 1px solid;
+    display: flex;
+    flex-direction: column;
+}
+.info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    padding: 10px;
+}
+.info h3, p{
+    padding: 0;
+    margin: 0;
+}
+.info h3{
+    color: #222;
+}
+.images{
+    display: flex;
+    justify-content: start;
+}
+.images img{
+    width: 100%;
+    aspect-ratio: 2/1;
+}

@@ -1,0 +1,17 @@
+<div class="post-card">
+    <div class="images">
+        @for (img of images; track $index) {
+        <img src={{img}} alt="">
+        }
+    </div>
+
+    <div class="info">
+        <h3>{{title}}</h3>
+        <p>{{address}}</p>
+
+        <h3>R$ {{price}}</h3>      
+
+    </div>
+
+
+</div>
