@@ -1,17 +1,27 @@
-<div class="post-card">
-    <div class="images">
-        @for (img of images; track $index) {
-        <img src={{img}} alt="">
-        }
-    </div>
+<div class="post-card" #postCard>
+    <div class="date">{{date}}</div>
+    <button *ngIf="currentIndex > 0" class="btn prev-img" (click)="prevImg()"><</button>
+            <div class="images" #imagesContainer>
+                @for (img of images; track $index) {
+                <div class="img">
+                    <img src={{img}} alt="">
+                </div>
+                }
+            </div>
+            <div class="indicators">
+                <div [class]="currentIndex === i ? 'dot selected':'dot'"  class="dot" (click)="goTo(i)" *ngFor="let img of images; let i=index"></div>
 
-    <div class="info">
-        <h3>{{title}}</h3>
-        <p>{{address}}</p>
+            </div>
 
-        <h3>R$ {{price}}</h3>      
+            <div class="info">
+                <h3>{{title}}</h3>
+                <p>{{address}}</p>
 
-    </div>
+                <h3>{{price}}</h3>
+            </div>
 
-
+            <div class="contact">
+                <button class="btn">Enviar mensagem</button>
+            </div>
+            <button *ngIf="currentIndex < getQtdImg() - 1" class="btn next-img" (click)="nextImg()">></button>
 </div>

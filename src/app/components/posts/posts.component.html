@@ -1,12 +1,7 @@
 <section class="posts">
 
     @for (post of posts; track $index) {
-    <app-post-card
-    [title]="post.title"
-    [images]="post.images"
-    [address]="post.address"
-    [price]="post.price"
-    ></app-post-card>
+        <app-post-card [date]="post.creationDate" [title]="post.title" [images]="post.images" [address]="post.address" [price]="post.price"></app-post-card>
     }
 
 </section>
