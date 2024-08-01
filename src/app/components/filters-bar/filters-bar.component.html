@@ -1,0 +1,19 @@
+<div class="filters-bar">
+  
+    <div class="filter">
+      <div>
+        <input class="bar" type="number" name="from" placeholder="R$ 0">
+        até
+        <input class="bar" type="number" name="for" placeholder="R$ 8.000">
+      </div>
+    </div>
+  
+    <div class="filter">
+      <select id="sort-option" #selectedSortOption class="bar">
+        <option *ngFor="let sortOption of sortOptions" [value]="sortOption">{{ sortOption }}</option>
+      </select>
+    </div>
+  
+    <button class="btn" (click)="applyFilters()">Aplicar filtro</button>
+  </div>
+  

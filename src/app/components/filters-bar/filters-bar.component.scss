@@ -1,0 +1,37 @@
+.filters-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+  align-self: center;
+}
+
+.filter {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-weight: bold;
+}
+
+select,
+input {
+  padding: 8px;
+  margin-top: 4px;
+  cursor: pointer;
+}
+
+input {
+  cursor: auto;
+}
+
+button {
+  margin-top: 3px;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  box-shadow: 2px 1px 3px orangered;
+}
